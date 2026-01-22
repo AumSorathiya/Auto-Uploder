@@ -3,8 +3,8 @@ import time
 import requests
 import os
 
-BOT_TOKEN = "8546377860:AAFSCT-n73hMmfKD4-pnrBILuzlnZ3UMdkU"
-CHANNEL_ID = "-1003484819491"
+BOT_TOKEN = "PASTE_YOUR_BOT_TOKEN_HERE"
+CHANNEL_ID = "-100XXXXXXXXXX"
 IMAGES_FOLDER = "images"
 
 API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
@@ -37,5 +37,6 @@ with open("captions.csv", newline="", encoding="utf-8") as file:
             print(f"✅ Uploaded: {row['filename']}")
         else:
             print(f"❌ Failed: {row['filename']} → {response.text}")
+
 
         time.sleep(1.2)  # IMPORTANT: avoid flood limits
